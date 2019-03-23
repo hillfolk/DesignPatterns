@@ -11,7 +11,7 @@ func (*LuxuryCar) NumWheels() int{
 	return 4
 }
 
-(*LuxuryCar) NumSeats() int{
+func (*LuxuryCar) NumSeats() int{
 	return 5
 }
 
