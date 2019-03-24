@@ -1,26 +1,26 @@
 package abstract_factory
 
-type VehicleFactory interface {
-	NewVeicle(v int) (Vehicle, error)
-}
-
-
-const (
-	LuxuryCarType = 1
-	FamilyCarType = 2
+import (
+	"errors"
+	"fmt"
 )
 
+type VehicleFactory interface {
+	GetVehicle(v int) (Vehicle, error)
+}
 
-type CarFactory struct{}
-func (c *CarFactory) NewVehicle(v int) (Vehicle, error){
-	switch v {
-	case LuxuryCarType:
-		return new(LuxuryCar), nil
-	case FamilyCarType:
-		return new(FamilyCar), nil
+const (
+	CarFactoryType       = 1
+	MotorbikeFactoryType = 2
+)
+
+func GetVehicleFactory(f int) (VehicleFactory, error) {
+	switch f {
+	case CarFactoryType:
+		return new(CarFactory), nil
+	case MotorbikeFactoryType:
+		return new(MotorbikeFactory), nil
 	default:
-		return nil,
-		errors.New(fmt.Sprintf("Vehicle of type %d not recognized\n", v))
-		
+		return nil, errors.New(fmt.Sprintf("Factory with id %d not recognized\n", f))
 	}
 }
