@@ -3,15 +3,15 @@ package abstract_factory
 type LuxuryCar struct{}
 
 
-func (*LuxuryCar) NumDoors() int{
+func (*LuxuryCar) GetDoors() int{
 	return 4
 }
 
-func (*LuxuryCar) NumWheels() int{
+func (*LuxuryCar) GetWheels() int{
 	return 4
 }
 
-func (*LuxuryCar) NumSeats() int{
+func (*LuxuryCar) GetSeats() int{
 	return 5
 }
 
