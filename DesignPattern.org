@@ -18,29 +18,7 @@
   디자인 패턴은 GoF 와 POSA 를 많이 참고 하였다. 
 ** TODO Creational Patterns (생성 패턴)
 
-*** TODO Abstract Factory(추상 팩토리)
-   구체적인 클래스를 지정하지 않고 관련성을 갖는 객체들의 집합을 생성하거나 서로 독립적인 객체들의 집합을 생성 할수 있는 인터페이스를 제공하는 패턴 
-
-   - 사용 사례
-     여러 종류를 메시지를 동일한 Factory 객체를 이용하여 생성 
-     생성을 단일화 하고 코드의 양을 줄일 수 있다. 
-   
-   1) UML IMAGE
-      
-
-   2) Object
-      Message Factory
-      Status Message 
-      Ack Message 
-
-
-**** TODO Java
-     
-**** TODO Pascal
-
-**** TODO Go
-
-**** TODO Python
+*** TODO  [[./AbstractFactory/AbstractFactory.org][AbstractFactory (추상 팩토리)]]
 
 
 *** TODO Builder (빌더)
