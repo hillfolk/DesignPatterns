@@ -33,13 +33,25 @@
 
 *** TODO Java
 
+
 #+BEGIN_SRC
 
 
 #+END_SRC
      
 *** TODO Pascal
+#+BEGIN_SRC
+
+
+#+END_SRC
 
 *** TODO Go
+#+BEGIN_SRC
 
+
+#+END_SRC
 *** TODO Python
+#+BEGIN_SRC
+
+
+#+END_SRC
