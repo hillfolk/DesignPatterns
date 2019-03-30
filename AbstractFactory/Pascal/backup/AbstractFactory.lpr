@@ -1,6 +1,14 @@
 program AbstractFactory;
 
+uses uFactory,uMessage;
+
+var
+  FFactory : TMessageFactory;
+
 begin
-  writeln('hello pascal');
+  FFactory := TMessageFactory.Create;
+  Writeln(FFactory.CreateMessage(emtAck).toMessageString);
+  Writeln(FFactory.CreateMessage(emtStatus).toMessageString);
+  readln;
 end.
 
