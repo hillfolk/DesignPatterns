@@ -29,14 +29,6 @@
 	Ack 메시지 (임의의 메시지 )
 
 ** CODE
-
-*** TODO Java
-
-
-#+BEGIN_SRC
-
-
-#+END_SRC
      
 *** TODO Pascal
 #+BEGIN_SRC

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="3">
+      <Unit0>
+        <Filename Value="AbstractFactory.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <CursorPos X="31" Y="6"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="ufactory.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="4" Y="23"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="umessage.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uMessage"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="44" Y="25"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit2>
+    </Units>
+    <JumpHistory Count="15" HistoryIndex="14">
+      <Position1>
+        <Filename Value="umessage.pas"/>
+        <Caret Line="12" Column="42"/>
+      </Position1>
+      <Position2>
+        <Filename Value="umessage.pas"/>
+        <Caret Line="14"/>
+      </Position2>
+      <Position3>
+        <Filename Value="umessage.pas"/>
+        <Caret Line="13"/>
+      </Position3>
+      <Position4>
+        <Filename Value="umessage.pas"/>
+        <Caret Line="21"/>
+      </Position4>
+      <Position5>
+        <Filename Value="umessage.pas"/>
+        <Caret Line="19" Column="24"/>
+      </Position5>
+      <Position6>
+        <Filename Value="umessage.pas"/>
+        <Caret Line="25"/>
+      </Position6>
+      <Position7>
+        <Filename Value="AbstractFactory.lpr"/>
+        <Caret Line="14" Column="68"/>
+      </Position7>
+      <Position8>
+        <Filename Value="AbstractFactory.lpr"/>
+        <Caret Line="3" Column="23"/>
+      </Position8>
+      <Position9>
+        <Filename Value="ufactory.pas"/>
+        <Caret Line="34" Column="24"/>
+      </Position9>
+      <Position10>
+        <Filename Value="umessage.pas"/>
+        <Caret Line="11"/>
+      </Position10>
+      <Position11>
+        <Filename Value="umessage.pas"/>
+        <Caret Line="12" Column="25"/>
+      </Position11>
+      <Position12>
+        <Filename Value="umessage.pas"/>
+        <Caret Line="25" Column="45"/>
+      </Position12>
+      <Position13>
+        <Filename Value="umessage.pas"/>
+        <Caret Line="19" Column="22"/>
+      </Position13>
+      <Position14>
+        <Filename Value="umessage.pas"/>
+        <Caret Line="25" Column="44"/>
+      </Position14>
+      <Position15>
+        <Filename Value="AbstractFactory.lpr"/>
+        <Caret Line="6" Column="31"/>
+      </Position15>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>
