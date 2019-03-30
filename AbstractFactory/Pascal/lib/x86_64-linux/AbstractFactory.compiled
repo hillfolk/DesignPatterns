@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CONFIG>
-  <Compiler Value="/usr/bin/fpc" Date="1535575190"/>
-  <Params Value=" -MObjFPC -Scghi -Cg -O1 -g -gl -l -vewnhibq -Fi/home/hillfolk/Drive/Writing/DesignPattern/AbstractFactory/Pascal/lib/x86_64-linux -Fu/home/hillfolk/Drive/Writing/DesignPattern/AbstractFactory/Pascal/ -FU/home/hillfolk/Drive/Writing/DesignPattern/AbstractFactory/Pascal/lib/x86_64-linux/ AbstractFactory.lpr"/>
-</CONFIG>
