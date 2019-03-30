@@ -4,7 +4,7 @@
 #+STARTUP: showall
 #+STARTUP: showeverything
 
-#+TITLE: Design Pattern 소개 와 언어별 구현
+#+TITLE: Design Patterns and Language-specific Example 
 
 #+Date: 2019-03-15
 
