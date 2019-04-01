@@ -1,0 +1,126 @@
+# -*- mode: org; -*-
+#+STARTUP: overview
+#+STARTUP: content
+#+STARTUP: showall
+#+STARTUP: showeverything
+
+#+TITLE: State 
+
+#+Date: 2019-03-15
+
+#+Author: Hillfolk
+
+
+   구체적인 클래스를 지정하지 않고 관련성을 갖는 객체들의 집합을 생성하거나 서로 독립적인 객체들의 집합을 생성 할수 있는 인터페이스를 제공하는 패턴 
+
+   - 사용 사례
+     여러 종류를 메시지를 동일한 Factory 객체를 이용하여 생성 
+     생성을 단일화 하고 코드의 양을 줄일 수 있다. 
+
+   - 사용 소감
+     주로 메시지나 복합적인 객체를 생하여 사용할때 많이 사용하였다. 코드가 간소화 되고 구현을 깔끔해져서 자주 사용하는 패턴
+   
+** UML
+   - Picture
+      [[./UML/AbstractFactory.png]]
+
+   - 구성원
+      - Message Factory
+	메시지를 생하는 팩토리 입력하는 타입에 따라 다른 구현의 메시지를 반환한다. 
+      - Status Message 
+	상태 메시지 (임의의 메시지 )
+      - Ack Message 
+	Ack 메시지 (임의의 메시지 )
+
+** CODE
+     
+*** DONE Pascal
+#+BEGIN_SRC
+
+type
+    EMessageType = (emtAck,emtStatus);
+
+    IMessage = interface
+        function ToMessageString:string;
+        end;
+  type
+
+   { TAckMessage }
+
+   TAckMessage = class(TInterfacedObject, IMessage)
+     function ToMessageString:string;
+   end;
+
+   { TStatusMessage }
+
+   TStatusMessage = class(TInterfacedObject, IMessage)
+        function ToMessageString:string;
+   end;
+
+implementation
+
+{ TStatusMessage }
+
+function TStatusMessage.ToMessageString: string;
+begin
+     Result := 'Status Message';
+end;
+
+{ TAckMessage }
+
+function TAckMessage.ToMessageString: string;
+begin
+     Result := 'Ack Message';
+end;
+
+//------------------------------------------------------------------
+
+{ MessageFactory }
+TMessageFactory = class(TObject)
+public
+    function   CreateMessage(AMessageType:EMessageType):IMessage;
+end;
+
+implementation
+
+
+{ TMessageFactory }
+
+function TMessageFactory.CreateMessage(AMessageType: EMessageType): IMessage;
+begin
+  case AMessageType of
+  emtAck:
+    begin
+      Result := TAckMessage.Create;
+    end;
+  emtStatus:
+    begin
+      Result := TStatusMessage.Create;
+    end;
+  end;
+end;
+
+//--------------------------------------------------------------------
+
+program AbstractFactory;
+
+uses uFactory,uMessage;
+
+var
+  FFactory : TMessageFactory;
+begin
+  FFactory := TMessageFactory.Create;
+  Writeln(FFactory.CreateMessage(emtAck).toMessageString);
+  Writeln(FFactory.CreateMessage(emtStatus).toMessageString);
+  readln;
+end.
+
+
+#+END_SRC
+
+*** CANCELLED Go
+#+BEGIN_SRC
+
+
+#+END_SRC
+

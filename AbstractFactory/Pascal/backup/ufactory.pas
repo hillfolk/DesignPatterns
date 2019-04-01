@@ -9,13 +9,11 @@ uses
   Classes, SysUtils,uMessage;
 
 type
-
-    { MessageFactory }
-
-    TMessageFactory = class(TObject)
-      public
-         function   CreateMessage(AMessageType:EMessageType):IMessage;
-    end;
+{ MessageFactory }
+TMessageFactory = class(TObject)
+public
+    function   CreateMessage(AMessageType:EMessageType):IMessage;
+end;
 
 implementation
 
