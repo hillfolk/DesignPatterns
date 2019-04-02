@@ -1,0 +1,124 @@
+# -*- mode: org; -*-
+#+STARTUP: overview
+#+STARTUP: content
+#+STARTUP: showall
+#+STARTUP: showeverything
+
+#+TITLE: State 
+
+#+Date: 2019-03-15
+
+#+Author: Hillfolk
+
+
+   객체의 내부 상태에 따라서 스스로행동을 변경할 수 있게 허가하는 패턴으로 이렇께 하면 객체는 마치 자신의 클래스를 바꾸는 것처럼 보인다.
+   해당 상태에 의존적인 동작들의 묶음을 상태 클래스의 메소드로 구성할수 있다.
+
+   - 사용 사례
+     TCPConnection 연결상태에 따라서 다르게 반응하는 객체를 구성
+     
+
+   - 사용 소감
+     객체 내부에서 상태를 변경하고 현실세계의 상태 변화를 자연스럽게 표현 할수 있고 불필요한 조건문 없이 새로운 상태를 추가 할수 있다.
+
+   
+** UML
+   - Picture
+
+
+   - 구성원
+      - State
+	상태 객체는 상태에 의존적인 메소드 집합
+	다른 상태로 전이되는 조건을 가지고 있다.
+
+      - Context 
+	현재 상황을 가지는 객체
+
+** CODE
+     
+*** DONE Pascal
+#+BEGIN_SRC
+
+
+#+END_SRC
+
+*** CANCELLED Go
+#+BEGIN_SRC
+package main
+
+import (
+	"fmt"
+	"os"
+	"math/rand"
+	"time"
+)
+
+
+type GameState interface {
+	executeState(* GameContext) bool
+}
+
+
+type GameContext struct {
+	SecretNumber int
+	Retries int
+	Won bool
+	Next GameState
+}
+
+
+type StartState struct{}
+func(s *StartState) executeState(c *GameContext) bool {
+	c.Next = &AskState{}
+
+	rand.Seed(time.Now().UnixNano())
+	c.SecretNumber = rand.Intn(10)
+	fmt.Println("Introduce a number a number of retries to set the difficulty:")
+	fmt.Fscanf(os.Stdin, "%d\n", &c.Retries)
+
+	return true
+}
+
+type FinishState struct{}
+func(f *FinishState) executeState(c *GameContext) bool {
+	if c.Won {
+		println("Congrats, you won")
+	} else {
+		fmt.Printf("You loose. The correct number was: %d\n", c.SecretNumber)
+	}
+
+	return false
+}
+
+type AskState struct {}
+func (a *AskState) executeState(c *GameContext) bool{
+	fmt.Printf("Introduce a number between 0 and 10, you have %d tries left\n", c.Retries)
+
+	var n int
+	fmt.Fscanf(os.Stdin, "%d", &n)
+	c.Retries = c.Retries - 1
+
+	if n == c.SecretNumber {
+		c.Won = true
+		c.Next = &FinishState{}
+	}
+
+	if c.Retries == 0 {
+		c.Next = &FinishState{}
+	}
+
+	return true
+}
+
+func main() {
+	start := StartState{}
+	game := GameContext{
+		Next:&start,
+	}
+
+	for game.Next.executeState(&game) {}
+}
+
+
+#+END_SRC
+

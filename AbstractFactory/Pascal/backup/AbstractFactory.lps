@@ -9,7 +9,7 @@
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <CursorPos X="30" Y="6"/>
-        <UsageCount Value="119"/>
+        <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -17,7 +17,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="1"/>
         <CursorPos X="4" Y="23"/>
-        <UsageCount Value="119"/>
+        <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit1>
       <Unit2>
@@ -26,7 +26,7 @@
         <UnitName Value="uMessage"/>
         <EditorIndex Value="2"/>
         <CursorPos X="27" Y="10"/>
-        <UsageCount Value="119"/>
+        <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit2>
     </Units>
