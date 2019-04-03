@@ -1,0 +1,45 @@
+# -*- mode: org; -*-
+#+STARTUP: overview
+#+STARTUP: content
+#+STARTUP: showall
+#+STARTUP: showeverything
+
+#+TITLE: Iterator 
+
+#+Date: 2019-03-15
+
+#+Author: Hillfolk
+
+
+반복자 패턴은 집합체츨 하나씩 나열하고 겁색하고 조사하고 싶을때 iterator 패턴을 사용하여 처리 할수 있다. 이렇게 처리 했을때 객체의 집합에 구현에 상관없이 반복 작업을 수행할 수 있다.
+Iterator 인터페이스를 구성하여 객체간의 결합을 약화 시켜 유연한 구조를 가져 갈수 있다. 
+   
+
+   - 사용 사례
+     다양한 구현의 아이템이나 이벤트 리스트를 각 이벤트 별로 작업을 처리 할때 적합하게 사용 가능하다.
+     
+
+   - 사용 소감
+     실제로 이렇게까지 반복자를 사용한 경험은 거의 없다. 하지만 조금만 생각하면 쉽게 적용 가능한 패턴이다.
+
+
+   
+** UML
+   - Picture
+     [[./UML/State.png][State]]
+
+   - 구성원
+      - Iterator
+	객체를 순서대로 접근 할수 있는 API 제공하는 인터페이스 
+	다음 요소가 존재하는지 여부를 검사할 수 있는 메소드 제공
+	다음 요소를 얻을 수 있는 메소드 제공
+
+      - Aggregate
+	Iterator 역할을 만들어 내는 인터페이스를 결정한다. 이 인터페이스는 요소들 순서대로 검색해주는 역할을 수행
+
+** CODE
+
+*** TODO Pascal 
+
+*** TODO Go 
+

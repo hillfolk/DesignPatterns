@@ -24,7 +24,7 @@
    
 ** UML
    - Picture
-
+     [[./UML/State.png][State]]
 
    - 구성원
       - State
@@ -42,7 +42,7 @@
 
 #+END_SRC
 
-*** CANCELLED Go
+*** DONE Go
 #+BEGIN_SRC
 package main
 
