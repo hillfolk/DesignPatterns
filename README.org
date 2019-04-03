@@ -16,9 +16,16 @@
 
 * Design Patterns
   디자인 패턴은 GoF 와 POSA 를 많이 참고 하였다. 
+
+* 패턴 사용의 포인트
+  - 객체간의 결합을 약화 시켜 유연한 프로그램 작성의 사례를 알려준다.
+  - 개발자 간의 의사소통을 돕고 인터페이스 만으로 구현을 짐작하게 할수 있다.
+  - 프로그램 설계지 다양한 옵션과 깊이 있는 구조적 고민을 할수 이도록 도와 준다.
+
+
 ** TODO Creational Patterns (생성 패턴)
 
-*** TODO  [[./AbstractFactory/AbstractFactory.org][AbstractFactory (추상 팩토리)]]
+*** DONE [[./AbstractFactory/AbstractFactory.org][AbstractFactory (추상 팩토리)]]
 
 
 *** TODO [[./Builder/Builder.org][Builder (빌더)]]
@@ -70,7 +77,7 @@
 *** Interpreter (인터프리터 패턴)
     주어진 언어에 대해, 그 언어의 문법을 위한 표현 수단을 정의하고,이와 아울러 그 표현 수단을 사용하여 해당 언어로 작성된 문장을 해석하는 해석기를 정의하는 패턴
 
-*** Iterator (반복자 패턴)
+*** TODO [[./Iterator/Iterator.org][Iterator (반복자 패턴)]]
     순차적으로 접근할 수 있는 방법을 제공하는 패턴
 
 *** Mediator (중재자 패턴)
@@ -82,7 +89,7 @@
 *** Observer (옵저버 패턴)
     객체들 사이에 일대 다의 의존 관계를 정의해 두어, 어떤 객체의 상태가 변할 때 객체에 의존성르 가진 다른 객체들의 그 변화를 통지 받고 자동으로 갱신될 수 있게 만드는 패턴
 
-*** [[./State/State.org][State (상태 패턴)]]
+*** DONE [[./State/State.org][State (상태 패턴)]]
     객체의 내부 상태에 따라 스스로 행동을 변경할 수 있게끔 허가하는 패턴
 
 *** [[./Strategy/Strategy.org][Strategy (전략 패턴)]]

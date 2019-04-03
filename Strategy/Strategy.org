@@ -1,0 +1,21 @@
+# -*- mode: org; -*-
+#+STARTUP: overview
+#+STARTUP: content
+#+STARTUP: showall
+#+STARTUP: showeverything
+
+#+TITLE: Strategy
+
+#+Date: 2019-03-15
+
+#+Author: Hillfolk
+
+
+   설명
+
+   - 사용 사례
+     
+     
+
+   - 사용 소감
+     
