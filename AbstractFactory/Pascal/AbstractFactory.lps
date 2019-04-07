@@ -3,19 +3,18 @@
   <ProjectSession>
     <Version Value="10"/>
     <BuildModes Active="Default"/>
-    <Units Count="3">
+    <Units Count="4">
       <Unit0>
         <Filename Value="AbstractFactory.lpr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <CursorPos X="30" Y="6"/>
+        <CursorPos X="8" Y="9"/>
         <UsageCount Value="119"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="ufactory.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="2"/>
         <CursorPos X="4" Y="23"/>
         <UsageCount Value="119"/>
         <Loaded Value="True"/>
@@ -24,11 +23,19 @@
         <Filename Value="umessage.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="uMessage"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="3"/>
         <CursorPos X="27" Y="10"/>
         <UsageCount Value="119"/>
         <Loaded Value="True"/>
       </Unit2>
+      <Unit3>
+        <Filename Value="../../../../../workspace/code_training/hello_world/fpc/unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Unit1"/>
+        <EditorIndex Value="1"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit3>
     </Units>
     <JumpHistory Count="16" HistoryIndex="15">
       <Position1>

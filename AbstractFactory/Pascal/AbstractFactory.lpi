@@ -25,7 +25,7 @@
         <FormatVersion Value="1"/>
       </local>
     </RunParams>
-    <Units Count="3">
+    <Units Count="4">
       <Unit0>
         <Filename Value="AbstractFactory.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -39,6 +39,11 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="uMessage"/>
       </Unit2>
+      <Unit3>
+        <Filename Value="../../../../../workspace/code_training/hello_world/fpc/unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Unit1"/>
+      </Unit3>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -48,6 +53,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="../../../../../workspace/code_training/hello_world/fpc"/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
   </CompilerOptions>
