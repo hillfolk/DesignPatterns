@@ -1,6 +1,6 @@
 program AbstractFactory;
 
-uses uFactory,uMessage, Unit1;
+uses uFactory,uMessage;
 
 var
   FFactory : TMessageFactory;
