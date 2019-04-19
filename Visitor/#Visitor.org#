@@ -11,13 +11,16 @@
 #+Author: Hillfolk
 
 데이터의 구조와 처리를 분리하여 데이터 구조를 방문하여 처리를 담당하는 visitor 클래스에게 데이터 처리를 위임 한다.
-각 객체별로 visitor 객체를 인수로 받는 visit 인터페이스를 구현하여 처리를 위임한다.
+각 객체별로 visitor 객체를 인수로 받는 visit 인터페이스를 구현하여 처리를 위임한다. 각 객체는 accept 함수를 가지며 해당 함수에서 각 Visitor 객체가 visit 을 수행할수 있도록 구현된다 .
    
-    [[./Visitor.png][UML]]
+   - 사용 사례
+      
+
+** TODO UML
+   - Picture
 
    
    - 구성원
-     Visit 함수를 가지고 있는 Visitor 인터페이스 구현
- 
+
      
 ** TODO CODE
