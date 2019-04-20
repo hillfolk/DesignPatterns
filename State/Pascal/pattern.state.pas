@@ -10,6 +10,8 @@ uses
 type
     TContext = class;
 
+    { IState }
+
     IState = interface
     ['{D992C938-03C4-4E98-9547-BACE52AB36DD}']
     function Next(c:TContext):Integer;
@@ -21,6 +23,8 @@ type
 
     TRunState = class(TInterfacedObject,IState)
     public
+    constructor Create;
+    destructor Destroy; override;
     function Next(c:TContext):Integer;
     function Prev(c:TContext):Integer;
     function GetName:string;
@@ -30,6 +34,8 @@ type
 
     THoldState = class(TInterfacedObject,IState)
     public
+    constructor Create;
+    destructor Destroy; override;
     function Next(c:TContext):Integer;
     function Prev(c:TContext):Integer;
     function GetName:string;
@@ -39,6 +45,8 @@ type
 
     TStopState = class(TInterfacedObject,IState)
     public
+    constructor Create;
+    destructor Destroy; override;
     function Next(c:TContext):Integer;
     function Prev(c:TContext):Integer;
     function GetName:string;
@@ -46,9 +54,13 @@ type
 
     {TContext}
     TContext = class
+             private
+             FLimit:Integer;
+             FCount:Integer;
       public
       FState:IState;
       constructor Create;
+      function ChangeState:IState;
       function CurrentState:string;
       end;
 
@@ -58,56 +70,80 @@ implementation
 
 constructor TContext.Create;
 begin
-  FState := nil;
+  FLimit:=5;
+  FCount := 0;
+  FState := TStopState.Create;
+end;
+
+function TContext.ChangeState: IState;
+var
+  LState:IState;
+begin
+  if FCount < FLimit then begin
+   FState.Next(Self);
+     end  else
+  begin
+   FState.Prev(Self);
+   FCount:=0;
+  end;
+     Inc(FCount);
+  Result := FState;
 end;
 
 function TContext.CurrentState: string;
 begin
   if FState = nil then
-        Resutl := ''; exit;
+     Result := ''; exit;
 
   Result := FState.GetName;
+end;
+
+constructor THoldState.Create;
+begin
+  inherited Create;
+end;
+
+destructor THoldState.Destroy;
+begin
+  inherited Destroy;
 end;
 
 { THoldState }
 function THoldState.Next(c: TContext): Integer;
 begin
-     if c.FState  <> nil then
-     FreeAndNil(c.FState);
-
-     c.FState = TStopState.Create;
-
+  c.FState := TStopState.Create;
 end;
 
 function THoldState.Prev(c: TContext): Integer;
 begin
-       if c.FState  <> nil then
-     FreeAndNil(c.FState);
-
-     c.FState = TRunState.Create;
+     c.FState := TRunState.Create;
 end;
 
 function THoldState.GetName: string;
 begin
-     Result := 'HOLD';
+  Result := 'HOLD';
 end;
 
 { TStopState }
 
+constructor TStopState.Create;
+begin
+       inherited Create;
+end;
+
+destructor TStopState.Destroy;
+begin
+  inherited Destroy;
+end;
+
 function TStopState.Next(c: TContext): Integer;
 begin
-       if c.FState  <> nil then
-     FreeAndNil(c.FState);
-
-     c.FState = TRunState.Create;
+   c.FState := TRUNState.Create;
 end;
 
 function TStopState.Prev(c: TContext): Integer;
 begin
-       if c.FState  <> nil then
-     FreeAndNil(c.FState);
-
-     c.FState = THoldState.Create;
+     c.FState := THoldState.Create;
 end;
 
 function TStopState.GetName: string;
@@ -117,20 +153,24 @@ end;
 
 { TRunState }
 
+constructor TRunState.Create;
+begin
+    inherited Create;
+end;
+
+destructor TRunState.Destroy;
+begin
+  inherited Destroy;
+end;
+
 function TRunState.Next(c: TContext): Integer;
 begin
-       if c.FState  <> nil then
-     FreeAndNil(c.FState);
-
-     c.FState = THoldState.Create;
+     c.FState := THoldState.Create;
 end;
 
 function TRunState.Prev(c: TContext): Integer;
 begin
-       if c.FState  <> nil then
-     FreeAndNil(c.FState);
-
-     c.FState = TStopState.Create;
+     c.FState := TStopState.Create;
 end;
 
 function TRunState.GetName: string;

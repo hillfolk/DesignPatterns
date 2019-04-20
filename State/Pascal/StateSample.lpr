@@ -12,12 +12,13 @@ uses
     i:Integer;
     LContext:TContext;
 begin
-     LContext = TContext.Create;
+     LContext := TContext.Create;
 
-     for i = 0;i < 100;i++ do
+     for i := 0 to 15 do
      begin
-       LContext.;
+       WriteLn(LContext.ChangeState.GetName);
      end;
+     ReadLn;
 
 
 end.
