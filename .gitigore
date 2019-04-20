@@ -50,7 +50,5 @@ flycheck_*.el
 .class
 
 .dcu
-/backup/
-/lib/
-
-*~
+backup/
+lib/
