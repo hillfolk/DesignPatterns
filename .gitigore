@@ -54,3 +54,5 @@ flycheck_*.el
 /lib/
 
 *~
+*/lib/x86_64-linux/
+*/backup/
