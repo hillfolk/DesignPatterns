@@ -26,7 +26,7 @@
 ** TODO Creational Patterns (생성 패턴)
 
 *** DONE [[./AbstractFactory/AbstractFactory.org][AbstractFactory (추상 팩토리)]]
-
+    구체적인 클래스를 지정하지 않고 관련성을 갖는 객체들의 집합을 생성하거나 서로 독립적인 객체들의 집합을 생성 할수 있는 인터페이스를 제공하는 패턴
 
 *** TODO [[./Builder/Builder.org][Builder (빌더)]]
     복합 객체의 생성 과정과 표현 방법을 분리하여 동일한 생성 절차에서 서로 다른 표현 결과를 만들 수 있게 하는 패턴 
