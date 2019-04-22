@@ -43,4 +43,4 @@
 *** TODO Pascal 
 *** TODO Java
 *** TODO Go
-*** TODO [[./Python/strategy.py][Python]]
+*** TODO [[./python/strategy.py][Python]]
