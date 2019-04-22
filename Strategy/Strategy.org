@@ -20,7 +20,7 @@
 
 ** UML
    - Picture
-    [[./UML/Strategy.png]]
+    [[./Strategy.png]]
    
    - 구성원
      * Strategy Interface
