@@ -1,0 +1,37 @@
+# -*- mode: org; -*-
+#+STARTUP: overview
+#+STARTUP: content
+#+STARTUP: showall
+#+STARTUP: showeverything
+
+#+TITLE: Abstract Factory (추상 팩토리)
+
+#+Date: 2019-03-20
+
+#+Author: Hillfolk
+
+   복합 객체의 생성 과정과 표현 방법을 분리하여 동일한 생성 절차에서 서로 다른 표현 결과를 만들 수 있게 하는 패턴 
+
+   - 활용
+     복합 객체의 생성 알고리즘이 이를 합성하는 요소 객체들이 무었인지 이들의 조립 방법이 독립적일때
+   - 합성할 객체들의 표현이 서로 다르더라도 생성 절차에서 이를 지원해야 할때
+   
+** UML
+   - Picture
+
+
+   - 구성원
+     1. Builder
+     2. ConcreteBuilder
+     3. Director
+     4. Client
+    
+** CODE
+     
+*** Pascal
+
+*** Go
+
+*** Java
+
+*** Python
