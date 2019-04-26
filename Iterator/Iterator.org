@@ -23,7 +23,7 @@ Iterator 인터페이스를 구성하여 객체간의 결합을 약화 시켜 �
    
 ** UML
    - Picture
-     [[./UML/Iterator.png][Iterator]]
+     [[./UML/Iterator.png]]
 
    - 구성원
       - Iterator
