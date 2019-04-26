@@ -9,7 +9,7 @@ import (
 func TestBuilderPattern(t *testing.T){
 	manufacturingComplex := ManufacturingDirector{}
 
-	carBuilder := &CarBuilder()
+	carBuilder := &CarBuilder{}
 	manufacturingComplex.SetBuilder(carBuilder)
 	manufacturingComplex.Construct()
 	car := carBuilder.GetVehicle()
